@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Connexion</h2>
+    <form (ngSubmit)="onLogin()">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-control" [(ngModel)]="credentials.email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Mot de passe</label>
+        <input type="password" id="password" class="form-control" [(ngModel)]="credentials.password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-success">Se connecter</button>
+    </form>
+  </div>
+  
