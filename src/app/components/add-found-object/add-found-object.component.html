@@ -1,0 +1,40 @@
+<form (ngSubmit)="onSubmit()" enctype="multipart/form-data" class="container mt-5 p-4 border rounded bg-light shadow-sm" style="max-width: 600px;">
+  <h4 class="mb-4 text-primary">declare found object</h4>
+
+  <div class="mb-3">
+    <label for="name" class="form-label">Name of object</label>
+    <input type="text" [(ngModel)]="lostObject.name" name="name" id="name" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="category" class="form-label">Catégory</label>
+    <input type="text" [(ngModel)]="lostObject.category" name="category" id="category" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="color" class="form-label">Color</label>
+    <input type="text" [(ngModel)]="lostObject.color" name="color" id="color" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="brand" class="form-label">Marque</label>
+    <input type="text" [(ngModel)]="lostObject.brand" name="brand" id="brand" class="form-control" />
+  </div>
+
+  <div class="mb-3">
+    <label for="location" class="form-label">Lieu</label>
+    <input type="text" [(ngModel)]="lostObject.location" name="location" id="location" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="date" class="form-label">Date</label>
+    <input type="date" [(ngModel)]="lostObject.date" name="date" id="date" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="image" class="form-label">Image </label>
+    <input type="file" (change)="onFileChange($event)" id="image" class="form-control" />
+  </div>
+
+  <button type="submit" class="btn btn-primary w-100">Déclarer l'objet perdu</button>
+</form>

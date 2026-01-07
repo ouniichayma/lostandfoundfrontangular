@@ -60,6 +60,14 @@ export class LoginComponent {
           localStorage.setItem("token", response.user.token);
          localStorage.setItem("id", response.user.id);
          localStorage.setItem("nom", response.user.nom);
+        
+         if (response.user.imageUrl) {
+          localStorage.setItem('image', response.user.imageUrl);
+        } else {
+          localStorage.setItem('image', 'test'); // ou une image par défaut
+        }
+
+
         console.log('Connexion réussie');
         console.log('role',response.user.role)
         console.log('user',response)

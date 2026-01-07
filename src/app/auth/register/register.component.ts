@@ -20,6 +20,7 @@ export class RegisterComponent {
   role:string = '';
   passwordHash:string = '';
   email: string = '';
+  password:string='';
 
 
 
@@ -59,6 +60,7 @@ ngOnInit(): void {
   this.role = '';
   this.passwordHash= '';
   this.email = '';
+  this.password=';'
 
 
   function passwordMatchValidator(control: AbstractControl) {
@@ -130,11 +132,12 @@ formData.append('LastName', this.signupForm.value.lastName);
 formData.append('Role', this.signupForm.value.role);
 formData.append('Email', this.signupForm.value.email);
 formData.append('PasswordHash', this.signupForm.value.passwordHash);
+formData.append('Password', this.signupForm.value.passwordHash);
      
-      formData.append('file', this.userFile);
+      formData.append('profileImage', this.userFile);
 
 
-    
+
    
       
       this.authService.signUp(formData).subscribe(res => {

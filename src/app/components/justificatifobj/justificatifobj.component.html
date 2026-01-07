@@ -1,0 +1,30 @@
+<div *ngIf="justificatifs.length > 0; else noData" class="justificatifs-wrapper">
+  <h2 class="decorated-title">📝 Validation des Justificatifs</h2>
+
+  <div class="cards-container">
+    <div class="justificatif-card" *ngFor="let just of justificatifs">
+      <div class="card-header">
+        <h4>#{{ just.id }} – {{ just.status }}</h4>
+        <span class="status-badge" [ngClass]="just.status.toLowerCase()">{{ just.status }}</span>
+      </div>
+
+      <div class="card-body">
+        <p><strong>Object ID:</strong> {{ just.objectId }}</p>
+        <p><strong>User ID:</strong> {{ just.userId }}</p>
+
+        <div class="images">
+          proof Image : <img [src]="'https://localhost:7243' + just.proofImageUrl" alt="Justificatif" style="height: 200px; width: 200px;">
+          object Image : <img [src]="'https://localhost:7243' + just.objectImageUrl" alt="Objet" style="height: 200px; width: 200px;">
+        </div>
+      </div>
+
+      <div class="card-footer" *ngIf="just.status === 'Pending'">
+        <button (click)="validateJustificatif(just.id)">✔ Valider</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noData>
+  <p class="no-data">Aucun justificatif pour cet objet.</p>
+</ng-template>

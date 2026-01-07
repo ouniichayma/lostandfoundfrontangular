@@ -13,6 +13,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserComponent } from './dashboards/user/user.component';
 import { AdminComponent } from './dashboards/admin/admin.component';
+import { UpdateComponent } from './crud/update/update.component';
+import { JustificatifobjComponent } from './components/justificatifobj/justificatifobj.component';
+import { AddLostObjectComponent } from './components/add-lost-object/add-lost-object.component';
+import { AddFoundObjectComponent } from './components/add-found-object/add-found-object.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { AdminComponent } from './dashboards/admin/admin.component';
     LoginComponent,
     RegisterComponent,
     UserComponent,
-    AdminComponent
+    AdminComponent,
+    UpdateComponent,
+    JustificatifobjComponent,
+    AddLostObjectComponent,
+    AddFoundObjectComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

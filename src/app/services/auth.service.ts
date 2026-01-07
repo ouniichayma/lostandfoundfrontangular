@@ -49,4 +49,17 @@ import { User } from '../models/user';
       // Return the authentication status
       return this.isLoggedIn;
     }
+
+
+
+
+
+
+    
+
+  getbyid(id: number) {
+    return this.http.get<User>(`${this.apiUrl}/users/`+ id);
+
+  }
+ 
   }  

@@ -1,0 +1,17 @@
+
+<br><br><br><br><br><br><br><br><br><br>
+
+
+<h2>Modifier Utilisateur</h2>
+<form (ngSubmit)="onSubmit()">
+  <label>Prénom</label>
+  <input [(ngModel)]="user.firstName" name="firstName" required />
+
+  <label>Nom</label>
+  <input [(ngModel)]="user.lastName" name="lastName" required />
+
+  <label>Email</label>
+  <input [(ngModel)]="user.email" name="email" required />
+
+  <button type="submit">Mettre à jour</button>
+</form>

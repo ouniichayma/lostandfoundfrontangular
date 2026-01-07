@@ -6,6 +6,7 @@ export class User {
     passwordHash: string= '';
     imageUrl?: string= '';     
     role?: string= '';  
+    password: string= '';
    
   }
 
